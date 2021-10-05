@@ -12,6 +12,6 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
-appctl
-proto/app_grpc.pb.go
+vendor/
+# Output directory
+bin/
