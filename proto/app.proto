@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package appctl;
+
+option go_package = "./appctl";
+
+// Definition for the deploy service
+service Deploy{
+    rpc DeployImage(DeployRequest) returns (DeployReply) {}
+}
+
+message DeployRequest {
+    string name = 1;
+}
+
+message DeployReply {
+    string message = 1;
+}
