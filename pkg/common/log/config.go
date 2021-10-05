@@ -1,4 +1,4 @@
-package main
+package log
 
 import (
 	"os"
@@ -15,11 +15,8 @@ func init() {
 	}
 }
 
-func Usage() {
-	log.Info("Usage:")
-	log.Info("appctl deploy --image <URI to OCI container>")
-}
+func Info(msg string) {
+	log.Info(msg)
 
-func main() {
-	Usage()
+	return
 }
