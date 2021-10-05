@@ -18,7 +18,8 @@ ensure-deps:
 build: ensure-deps
 	go build -o ${OUTPUT_DIR}/${APPCTL_CLI} ./cmd/...
 
-test:
+test: 
+	go test ./pkg/... ./cmd/...
 
 run: ensure-deps
 	go run cmd/appctl.go
